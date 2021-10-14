@@ -11,6 +11,10 @@ public class Shooting : MonoBehaviour
     #region Variables
     [SerializeField] Camera cam;
     [SerializeField] SpawnHandler spawnHandler;
+    [SerializeField] int headPoints;
+    [SerializeField] int bodyPoints;
+    [SerializeField] int legsPoints;
+    [SerializeField] int missPoints;
     #endregion
 
     #region Update
@@ -31,26 +35,26 @@ public class Shooting : MonoBehaviour
                     if (hit.collider.gameObject.tag == "Head")
                     {
                         Score.headShotCount++;
-                        Score.score += 100;
+                        Score.score += headPoints;
                         Destroy(hit.transform.parent.gameObject);
                     }
                     else if (hit.collider.gameObject.tag == "Body")
                     {
                         Score.bodyShotCount++;
-                        Score.score += 25;
+                        Score.score += bodyPoints;
                         Destroy(hit.transform.parent.gameObject);
                     }
                     else if (hit.collider.gameObject.tag == "Legs")
                     {
                         Score.legShotCount++;
-                        Score.score += 15;
+                        Score.score += legsPoints;
                         Destroy(hit.transform.parent.gameObject);
                     }
                     // Lose score if you don't hit something thats not a target
-                    else if (Score.score >= 10)
+                    else if (Score.score >= missPoints)
                     {
                         Score.missedShotCount++;
-                        Score.score -= 10;
+                        Score.score -= missPoints;
                     }
                     else
                     {
@@ -61,10 +65,10 @@ public class Shooting : MonoBehaviour
                     spawnHandler.Spawn();
                 }
                 // Lose score if you miss your shot
-                else if (Score.score >= 10)
+                else if (Score.score >= missPoints)
                 {
                     Score.missedShotCount++;
-                    Score.score -= 10;
+                    Score.score -= missPoints;
                 }
                 else
                 {
