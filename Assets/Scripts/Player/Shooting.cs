@@ -25,55 +25,56 @@ public class Shooting : MonoBehaviour
             // If mouse button is clicked
             if (Input.GetMouseButtonDown(0))
             {
-                Score.totalShotCount++;
+                Score.Instance.totalShotCount++;
                 // Create a ray
                 Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
                 // If the ray hits
                 if (Physics.Raycast(ray, out RaycastHit hit))
                 {
+                    Debug.Log(hit.collider.gameObject.tag);
                     // Add score to the Score script and destroy the gameobject
                     if (hit.collider.gameObject.tag == "Head")
                     {
-                        Score.headShotCount++;
-                        Score.score += headPoints;
+                        Score.Instance.headShotCount++;
+                        Score.Instance.score += headPoints;
                         Destroy(hit.transform.parent.gameObject);
                     }
                     else if (hit.collider.gameObject.tag == "Body")
                     {
-                        Score.bodyShotCount++;
-                        Score.score += bodyPoints;
+                        Score.Instance.bodyShotCount++;
+                        Score.Instance.score += bodyPoints;
                         Destroy(hit.transform.parent.gameObject);
                     }
                     else if (hit.collider.gameObject.tag == "Legs")
                     {
-                        Score.legShotCount++;
-                        Score.score += legsPoints;
+                        Score.Instance.legShotCount++;
+                        Score.Instance.score += legsPoints;
                         Destroy(hit.transform.parent.gameObject);
                     }
                     // Lose score if you don't hit something thats not a target
-                    else if (Score.score >= missPoints)
+                    else if (Score.Instance.score >= missPoints)
                     {
-                        Score.missedShotCount++;
-                        Score.score -= missPoints;
+                        Score.Instance.missedShotCount++;
+                        Score.Instance.score -= missPoints;
                     }
                     else
                     {
-                        Score.missedShotCount++;
-                        Score.score = 0;
+                        Score.Instance.missedShotCount++;
+                        Score.Instance.score = 0;
                     }
                     // Spawn another target
                     spawnHandler.Spawn();
                 }
                 // Lose score if you miss your shot
-                else if (Score.score >= missPoints)
+                else if (Score.Instance.score >= missPoints)
                 {
-                    Score.missedShotCount++;
-                    Score.score -= missPoints;
+                    Score.Instance.missedShotCount++;
+                    Score.Instance.score -= missPoints;
                 }
                 else
                 {
-                    Score.missedShotCount++;
-                    Score.score = 0;
+                    Score.Instance.missedShotCount++;
+                    Score.Instance.score = 0;
                 }
             }
         }

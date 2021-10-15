@@ -9,14 +9,15 @@ using UnityEngine;
 public class Settings : MonoBehaviour
 {
     #region Variables
-    public static Settings SettingsInstance;
-    public static float mouseSensitivity;
+    public static Settings Instance;
+    [Header("Dont touch")]
+    public float mouseSensitivity;
     #endregion
 
     #region Awake
     private void Awake()
     {
-        SettingsInstance = this;
+        Instance = this;
         // Load shit from PlayerPrefs
         mouseSensitivity = PlayerPrefs.GetFloat("mouseSensitivity", 1);
     }

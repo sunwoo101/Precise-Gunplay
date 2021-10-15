@@ -7,8 +7,16 @@ using UnityEngine.UI;
 public class TrainingSelection : MonoBehaviour
 {
     #region Variables
-    public static int timer;
+    public static TrainingSelection Instance;
+    public int timer;
     string trainingSelection;
+    #endregion
+
+    #region Awake
+    private void Awake()
+    {
+        Instance = this;
+    }
     #endregion
 
     #region SelectTraining

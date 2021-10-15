@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour
         if (!PauseMenu.paused)
         {
             // Convert to Valorant sens
-            mouseSensitivity = Settings.mouseSensitivity *  1.3992f;
+            mouseSensitivity = Settings.Instance.mouseSensitivity *  1.3992f;
 
             // Mouse input
             float m_pitch = Input.GetAxisRaw("Mouse Y") * mouseSensitivity;

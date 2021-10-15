@@ -11,15 +11,7 @@ using UnityEngine;
 public class TargetBounds : MonoBehaviour
 {
     #region Variables
-    public static TargetBounds TargetBoundsInstance;
     [SerializeField] BoxCollider col;
-    #endregion
-
-    #region Awake
-    private void Awake()
-    {
-        TargetBoundsInstance = this;
-    }
     #endregion
 
     #region GetRandomPosition

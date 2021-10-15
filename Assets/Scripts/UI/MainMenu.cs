@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     #region Start
     private void Start()
     {
-        sensitivityInputField.text = Settings.mouseSensitivity.ToString();
+        sensitivityInputField.text = Settings.Instance.mouseSensitivity.ToString();
     }
     #endregion
 
@@ -30,8 +30,8 @@ public class MainMenu : MonoBehaviour
     #region ChangeSensitivity
     public void ChangeSensitivity()
     {
-        Settings.mouseSensitivity = float.Parse(sensitivityInputField.text);
-        Settings.SettingsInstance.SaveSensitivity();
+        Settings.Instance.mouseSensitivity = float.Parse(sensitivityInputField.text);
+        Settings.Instance.SaveSensitivity();
     }
     #endregion
 }

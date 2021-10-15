@@ -9,14 +9,15 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     #region Varaibles
-    public static Score ScoreInstance;
-    public static int score;
-    public static int highScore;
-    public static int totalShotCount;
-    public static int headShotCount;
-    public static int bodyShotCount;
-    public static int legShotCount;
-    public static int missedShotCount;
+    public static Score Instance;
+    [Header("Dont touch")]
+    public int score;
+    public int highScore;
+    public int totalShotCount;
+    public int headShotCount;
+    public int bodyShotCount;
+    public int legShotCount;
+    public int missedShotCount;
     [Header("References")]
     [SerializeField] Text scoreText;
     #endregion
@@ -24,7 +25,7 @@ public class Score : MonoBehaviour
     #region Awake
     private void Awake()
     {
-        ScoreInstance = this;
+        Instance = this;
     }
     #endregion
 
@@ -42,6 +43,7 @@ public class Score : MonoBehaviour
     {
         // Display score
         scoreText.text = "Score: " + score;
+        Debug.Log(score);
     }
     #endregion
 

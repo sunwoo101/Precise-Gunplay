@@ -29,8 +29,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // Set the timer to the timer the player choses
-        timer = TrainingSelection.timer;
-        Debug.Log(timer);
+        timer = TrainingSelection.Instance.timer;
     }
     #endregion
 
@@ -47,9 +46,9 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Score.highScore = 0;
+            Score.Instance.highScore = 0;
             // Call the SetHighScore function
-            Score.ScoreInstance.SetHighScore();
+            Score.Instance.SetHighScore();
         }
 #endif
         // Timer
@@ -87,19 +86,19 @@ public class GameManager : MonoBehaviour
 
         #region Display Scores
         // If score is higher than highscore
-        if (Score.score > Score.highScore)
+        if (Score.Instance.score > Score.Instance.highScore)
         {
             // Call the SetHighScore function
-            Score.ScoreInstance.SetHighScore();
+            Score.Instance.SetHighScore();
         }
         // Set text
-        scoreText.text = "Score: " + Score.score;
-        highScoreText.text = "High Score: " + Score.highScore;
-        totalShotCountText.text = "Total Shot Count: " + Score.totalShotCount;
-        headShotCountText.text = "Head Shot Count: " + Score.headShotCount;
-        bodyShotCountText.text = "Body Shot Count: " + Score.bodyShotCount;
-        legShotCountText.text = "Leg Shot Count: " + Score.legShotCount;
-        missedShotCountText.text = "Missed Shot Count: " + Score.missedShotCount;
+        scoreText.text = "Score: " + Score.Instance.score;
+        highScoreText.text = "High Score: " + Score.Instance.highScore;
+        totalShotCountText.text = "Total Shot Count: " + Score.Instance.totalShotCount;
+        headShotCountText.text = "Head Shot Count: " + Score.Instance.headShotCount;
+        bodyShotCountText.text = "Body Shot Count: " + Score.Instance.bodyShotCount;
+        legShotCountText.text = "Leg Shot Count: " + Score.Instance.legShotCount;
+        missedShotCountText.text = "Missed Shot Count: " + Score.Instance.missedShotCount;
         #endregion
     }
     #endregion

@@ -9,6 +9,7 @@ public class TargetSpawner : MonoBehaviour
 {
     #region Variables
     [SerializeField] GameObject target;
+    [SerializeField] TargetBounds targetBounds;
     [SerializeField] int initialTargetCount;
     #endregion
 
@@ -27,7 +28,7 @@ public class TargetSpawner : MonoBehaviour
     public void Spawn()
     {
         // Spawns a target with a randomly generated position using the TargetBounds script
-        Instantiate(target, TargetBounds.TargetBoundsInstance.GetRandomPosition(), Quaternion.identity);
+        Instantiate(target, targetBounds.GetRandomPosition(), Quaternion.identity);
     }
     #endregion
 }
