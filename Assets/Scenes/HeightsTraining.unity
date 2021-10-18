@@ -655,8 +655,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0, z: 10}
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Size: {x: 8, y: 0, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &211251893
 Transform:
   m_ObjectHideFlags: 0
@@ -665,7 +665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211251890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 8053894692432164747, guid: c1248c71f700f47d1b28c04df84a6e61, type: 3}
   targetBounds: {fileID: 587292224}
-  initialTargetCount: 1
+  initialTargetCount: 0
 --- !u!114 &587292224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,8 +1533,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0, z: 10}
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Size: {x: 2, y: 0, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &587292226
 Transform:
   m_ObjectHideFlags: 0
@@ -1543,7 +1543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587292222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 5, z: 10}
+  m_LocalPosition: {x: 7, y: 5, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2855,7 +2855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 8053894692432164747, guid: c1248c71f700f47d1b28c04df84a6e61, type: 3}
   targetBounds: {fileID: 1232882357}
-  initialTargetCount: 1
+  initialTargetCount: 0
 --- !u!114 &1232882357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,8 +2880,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0, z: 10}
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Size: {x: 2, y: 0, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1232882359
 Transform:
   m_ObjectHideFlags: 0
@@ -2890,7 +2890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232882355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: 3, z: 10}
+  m_LocalPosition: {x: -7, y: 3, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3002,6 +3002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetSpawners:
   - {fileID: 211251894}
+  - {fileID: 1232882356}
+  - {fileID: 587292223}
 --- !u!4 &1251990592
 Transform:
   m_ObjectHideFlags: 0

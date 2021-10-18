@@ -562,7 +562,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-9880
+  m_Name: pb_Mesh23440
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 8053894692432164747, guid: c1248c71f700f47d1b28c04df84a6e61, type: 3}
   targetBounds: {fileID: 583366214}
-  initialTargetCount: 3
+  initialTargetCount: 0
 --- !u!114 &583366214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +779,7 @@ BoxCollider:
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 0, z: 10}
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &583366216
 Transform:
   m_ObjectHideFlags: 0
@@ -788,7 +788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583366212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 8053894692432164747, guid: c1248c71f700f47d1b28c04df84a6e61, type: 3}
   targetBounds: {fileID: 1194317332}
-  initialTargetCount: 3
+  initialTargetCount: 1
 --- !u!114 &1194317332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2028,7 @@ BoxCollider:
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 0, z: 10}
-  m_Center: {x: 5, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1194317334
 Transform:
   m_ObjectHideFlags: 0
@@ -2037,7 +2037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194317330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3057,6 +3057,7 @@ MonoBehaviour:
   bodyShotCount: 0
   legShotCount: 0
   missedShotCount: 0
+  trainingHighScore: 
   scoreText: {fileID: 1112597573}
 --- !u!4 &1898416968
 Transform:
