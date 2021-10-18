@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+ * This script is for selecting the training and choosing a timer
+ */
 public class TrainingSelection : MonoBehaviour
 {
     #region Variables
     public static TrainingSelection Instance;
     public int timer;
-    string trainingSelection;
+    public string trainingSelection;
     #endregion
 
     #region Awake

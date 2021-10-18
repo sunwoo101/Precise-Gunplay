@@ -18,6 +18,7 @@ public class Score : MonoBehaviour
     public int bodyShotCount;
     public int legShotCount;
     public int missedShotCount;
+    public string trainingHighScore;
     [Header("References")]
     [SerializeField] Text scoreText;
     #endregion
@@ -34,7 +35,8 @@ public class Score : MonoBehaviour
     {
         Reset();
         // Get high score
-        highScore = PlayerPrefs.GetInt("highScore", 0);
+        trainingHighScore = TrainingSelection.Instance.trainingSelection + TrainingSelection.Instance.timer;
+        highScore = PlayerPrefs.GetInt(trainingHighScore, 0);
     }
     #endregion
 
@@ -43,7 +45,6 @@ public class Score : MonoBehaviour
     {
         // Display score
         scoreText.text = "Score: " + score;
-        Debug.Log(score);
     }
     #endregion
 
@@ -52,7 +53,7 @@ public class Score : MonoBehaviour
     {
         // Set high score
         highScore = score;
-        PlayerPrefs.SetInt("highScore", highScore);
+        PlayerPrefs.SetInt(trainingHighScore, highScore);
     }
     #endregion
 

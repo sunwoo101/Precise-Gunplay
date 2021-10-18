@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StandardTraining.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/180Practice.unity
+    path: Assets/Scenes/180Training.unity
     guid: 8e3641590c447486cb6a6a961d1a8505
   - enabled: 1
-    path: Assets/Scenes/90Practice.unity
+    path: Assets/Scenes/90Training.unity
     guid: 8ac6bde09a97f4dd49ee65302d23ef82
+  - enabled: 1
+    path: Assets/Scenes/HeightsTraining.unity
+    guid: 93c3178b4615549fa874d042c1d5103c
   m_configObjects: {}

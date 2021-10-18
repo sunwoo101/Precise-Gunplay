@@ -38,18 +38,24 @@ public class Shooting : MonoBehaviour
                         Score.Instance.headShotCount++;
                         Score.Instance.score += headPoints;
                         Destroy(hit.transform.parent.gameObject);
+                        // Spawn another target
+                        spawnHandler.Spawn();
                     }
                     else if (hit.collider.gameObject.tag == "Body")
                     {
                         Score.Instance.bodyShotCount++;
                         Score.Instance.score += bodyPoints;
                         Destroy(hit.transform.parent.gameObject);
+                        // Spawn another target
+                        spawnHandler.Spawn();
                     }
                     else if (hit.collider.gameObject.tag == "Legs")
                     {
                         Score.Instance.legShotCount++;
                         Score.Instance.score += legsPoints;
                         Destroy(hit.transform.parent.gameObject);
+                        // Spawn another target
+                        spawnHandler.Spawn();
                     }
                     // Lose score if you don't hit something thats not a target
                     else if (Score.Instance.score >= missPoints)
@@ -62,8 +68,6 @@ public class Shooting : MonoBehaviour
                         Score.Instance.missedShotCount++;
                         Score.Instance.score = 0;
                     }
-                    // Spawn another target
-                    spawnHandler.Spawn();
                 }
                 // Lose score if you miss your shot
                 else if (Score.Instance.score >= missPoints)

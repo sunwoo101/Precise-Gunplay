@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * This script is for the Main Menu
+ */
 public class MainMenu : MonoBehaviour
 {
     #region Variables
