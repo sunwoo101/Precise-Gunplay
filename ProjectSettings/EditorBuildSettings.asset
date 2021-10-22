@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HeightsTraining.unity
     guid: 93c3178b4615549fa874d042c1d5103c
+  - enabled: 1
+    path: Assets/Scenes/GridshotTraining.unity
+    guid: 7021746b0b4114fb08d049080f558034
   m_configObjects: {}

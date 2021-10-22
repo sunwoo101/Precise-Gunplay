@@ -11,6 +11,7 @@ using UnityEngine;
 public class TargetBounds : MonoBehaviour
 {
     #region Variables
+    [Header("References")]
     [SerializeField] BoxCollider col;
     #endregion
 

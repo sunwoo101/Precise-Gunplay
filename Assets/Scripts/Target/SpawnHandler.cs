@@ -9,8 +9,9 @@ using UnityEngine;
 public class SpawnHandler : MonoBehaviour
 {
     #region Variables
-    [SerializeField] TargetSpawner[] targetSpawners;
     TargetSpawner targetSpawner;
+    [Header("References")]
+    [SerializeField] TargetSpawner[] targetSpawners;
     #endregion
 
     #region Spawn

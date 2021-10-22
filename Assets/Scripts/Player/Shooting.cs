@@ -9,12 +9,23 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     #region Variables
-    [SerializeField] Camera cam;
-    [SerializeField] SpawnHandler spawnHandler;
     [SerializeField] int headPoints;
     [SerializeField] int bodyPoints;
     [SerializeField] int legsPoints;
     [SerializeField] int missPoints;
+    [SerializeField] float sfxVolume;
+    [Header("References")]
+    [SerializeField] Camera cam;
+    [SerializeField] SpawnHandler spawnHandler;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip hitSound;
+    #endregion
+
+    #region Start
+    private void Start()
+    {
+        sfxVolume = Settings.Instance.sfxVolume;
+    }
     #endregion
 
     #region Update
@@ -38,6 +49,8 @@ public class Shooting : MonoBehaviour
                         Score.Instance.headShotCount++;
                         Score.Instance.score += headPoints;
                         Destroy(hit.transform.parent.gameObject);
+                        // Play hit sound
+                        audioSource.PlayOneShot(hitSound, sfxVolume);
                         // Spawn another target
                         spawnHandler.Spawn();
                     }
@@ -46,6 +59,8 @@ public class Shooting : MonoBehaviour
                         Score.Instance.bodyShotCount++;
                         Score.Instance.score += bodyPoints;
                         Destroy(hit.transform.parent.gameObject);
+                        // Play hit sound
+                        audioSource.PlayOneShot(hitSound, sfxVolume);
                         // Spawn another target
                         spawnHandler.Spawn();
                     }
@@ -54,6 +69,8 @@ public class Shooting : MonoBehaviour
                         Score.Instance.legShotCount++;
                         Score.Instance.score += legsPoints;
                         Destroy(hit.transform.parent.gameObject);
+                        // Play hit sound
+                        audioSource.PlayOneShot(hitSound, sfxVolume);
                         // Spawn another target
                         spawnHandler.Spawn();
                     }

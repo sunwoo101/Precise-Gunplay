@@ -12,6 +12,7 @@ public class Settings : MonoBehaviour
     public static Settings Instance;
     [Header("Dont touch")]
     public float mouseSensitivity;
+    public float sfxVolume;
     #endregion
 
     #region Awake
@@ -20,6 +21,7 @@ public class Settings : MonoBehaviour
         Instance = this;
         // Load shit from PlayerPrefs
         mouseSensitivity = PlayerPrefs.GetFloat("mouseSensitivity", 1);
+        sfxVolume = PlayerPrefs.GetFloat("sfxVolume", 0.5f);
     }
     #endregion
 
@@ -27,6 +29,13 @@ public class Settings : MonoBehaviour
     public void SaveSensitivity()
     {
         PlayerPrefs.SetFloat("mouseSensitivity", mouseSensitivity);
+    }
+    #endregion
+
+    #region SaveSfxVolume
+    public void SaveSfxVolume()
+    {
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
     }
     #endregion
 }

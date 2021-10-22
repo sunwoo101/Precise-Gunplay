@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
     #region Variables
     float xRotation;
     float mouseSensitivity;
-    // References
+    [Header("References")]
     [SerializeField] Transform player;
     #endregion
 

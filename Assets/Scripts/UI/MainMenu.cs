@@ -11,12 +11,14 @@ public class MainMenu : MonoBehaviour
     #region Variables
     [Header("References")]
     [SerializeField] InputField sensitivityInputField;
+    [SerializeField] Slider sfxSlider;
     #endregion
 
     #region Start
     private void Start()
     {
         sensitivityInputField.text = Settings.Instance.mouseSensitivity.ToString();
+        sfxSlider.value = Settings.Instance.sfxVolume;
     }
     #endregion
 
@@ -35,6 +37,14 @@ public class MainMenu : MonoBehaviour
     {
         Settings.Instance.mouseSensitivity = float.Parse(sensitivityInputField.text);
         Settings.Instance.SaveSensitivity();
+    }
+    #endregion
+
+    #region ChangeSfxVolume
+    public void ChangeSfxVolume(float sfxVolume)
+    {
+        Settings.Instance.sfxVolume = sfxVolume;
+        Settings.Instance.SaveSfxVolume();
     }
     #endregion
 }

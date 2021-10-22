@@ -8,9 +8,10 @@ using UnityEngine;
 public class TargetSpawner : MonoBehaviour
 {
     #region Variables
+    [SerializeField] int initialTargetCount;
+    [Header("References")]
     [SerializeField] GameObject target;
     [SerializeField] TargetBounds targetBounds;
-    [SerializeField] int initialTargetCount;
     #endregion
 
     #region Start
